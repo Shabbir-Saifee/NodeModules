@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+	function updateFile(flag){
+		data = document.getElementById('fileContent').value;
+		document.location.href = '/message.html?data=' + data + "&flag=" + flag;
+	}
+</script>
+</head>
+<body>
+<p>
+<strong>The date and time are currently: </strong>
+</p>
+<ul>
+<li>
+	{datetime}
+</li>
+</ul>
+<p>Hello! Add update File using Text box below</p>
+<textarea name="fileContent" id="fileContent"></textarea><br/><br/>
+<button onclick="updateFile('a');">Append File</button>
+<button onclick="updateFile('w');">Replace Content</button>
+</body>
+</html>
